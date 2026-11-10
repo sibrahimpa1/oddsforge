@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: #0a0e13;
+  --color-panel: #111821;
+  --color-line: #1e2935;
+  --color-ink: #e8edf2;
+  --color-muted: #8794a3;
+  --color-accent: #a3e635;
+  --color-sky: #38bdf8;
+  --color-good: #4ade80;
+  --color-bad: #f87171;
+  --color-warn: #fbbf24;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+.tabular-nums,
+.font-mono {
+  font-variant-numeric: tabular-nums;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.card {
+  border: 1px solid var(--color-line);
+  background: var(--color-panel);
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+table.data {
+  width: 100%;
+  font-size: 0.8125rem;
+}
+table.data th {
+  text-align: left;
+  font-weight: 500;
+  color: var(--color-muted);
+  padding: 0.4rem 0.5rem;
+  border-bottom: 1px solid var(--color-line);
+  white-space: nowrap;
+}
+table.data td {
+  padding: 0.4rem 0.5rem;
+  border-bottom: 1px solid var(--color-line);
+  font-variant-numeric: tabular-nums;
+}
